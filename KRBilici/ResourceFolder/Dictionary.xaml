@@ -1,0 +1,132 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="Label" x:Key="LblSty" BasedOn="{StaticResource MaterialDesignLabel}">
+        <Setter Property="FontFamily" Value="Bahnschrift SemiBold"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+    </Style>
+
+    <Style TargetType="Window" x:Key="WindSty">
+        <Setter Property="Background" Value="#FF232323"/>
+        <Setter Property="Icon" Value="LogoKR.png"/>
+    </Style>
+
+
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="Verdana"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Background" Value="#FFE24460"/>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="BorderBrush" Value="LightGray"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Width" Value="300"/>
+    </Style>
+
+    <Style x:Key="TexBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Bahnschrift"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+    </Style>
+
+    <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+        <Setter Property="FontFamily" Value="Bahnschrift"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Margin" Value="16"/>
+        <Setter Property="Background" Value="#FF363636"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#FF512DA8"/>
+    </Style>
+
+    <Style TargetType="PasswordBox" BasedOn="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+        <Setter Property="FontFamily" Value="Bahnschrift"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Margin" Value="15"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="BorderBrush" Value="#FF512DA8"/>
+    </Style>
+
+    <Style TargetType="DataGrid" x:Key="DgStyle">
+        <Setter Property="FontFamily" Value="Consolas"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="BorderBrush" Value="#FF512DA8"/>
+        <Setter Property="BorderThickness" Value="2, 2, 2, 2"/>
+
+    </Style>
+
+    <Style TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="FontFamily" Value="Consolas"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Padding" Value="10"/>
+    </Style>
+
+
+
+
+    <Style TargetType="MenuItem" x:Key="MenuItemStyle">
+        <Setter Property="FontFamily" Value="Bahnschrift"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Background" Value="#FF343434"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+
+    </Style>
+
+    <Style TargetType="Menu" x:Key="MenuStyle">
+        <Setter Property="FontFamily" Value="Bahnschrift"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Background" Value="#FF512DA8"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignComboBox}">
+        <Setter Property="FontFamily" Value="Bahnschrift"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Foreground" Value="#FFE5E5E5"/>
+        <Setter Property="BorderBrush" Value="#FF512DA8"/>
+    </Style>
+
+    
+    <ControlTemplate x:Key="MenuControlTemplate1" TargetType="{x:Type Menu}">
+        <Border CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+        </Border>
+    </ControlTemplate>
+
+
+
+
+</ResourceDictionary>

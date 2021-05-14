@@ -1,0 +1,83 @@
+﻿<Window x:Class="KRBilici.WinFolder.AddProvider"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KRBilici.WinFolder"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Добавление поставщика" Height="600" Width="800"
+        Style="{DynamicResource WindSty}"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15" />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="15" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Добавление поставщика"
+               Grid.Row="1"
+               Grid.Column="1"
+               Grid.ColumnSpan="3"
+               Style="{DynamicResource LblSty}"/>
+
+
+
+        <TextBox x:Name="TbNameProvider"
+                 Grid.Column="1"
+                 Grid.Row="3"
+                 Grid.ColumnSpan="3"
+                  materialDesign:HintAssist.Hint="Название поставщика"
+                 materialDesign:HintAssist.HintOpacity="1"/>
+
+
+
+        <TextBox x:Name="TbNumberPhoneProvider"
+                 Grid.Column="1"
+                 Grid.Row="5"
+                 Grid.ColumnSpan="3" 
+                  materialDesign:HintAssist.Hint="Номер телефона"
+                 materialDesign:HintAssist.HintOpacity="1"
+                 />
+
+
+        <TextBox x:Name="TbTypeProvider"
+                 Grid.Column="1"
+                 Grid.Row="7"
+                 Grid.ColumnSpan="3"
+                  materialDesign:HintAssist.Hint="Тип поставки"
+                 materialDesign:HintAssist.HintOpacity="1"
+                 />
+
+        <Button x:Name="BtAddProvider"
+                Content="Добавить поставщика"
+                materialDesign:ButtonAssist.CornerRadius="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="9"  
+                FontSize="20"
+                 Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                Click="BtAddProvider_Click"
+                Width="500"               
+                Height="40"/>
+
+
+
+    </Grid>
+</Window>

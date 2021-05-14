@@ -1,0 +1,106 @@
+﻿<Window x:Class="KRBilici.WinFolder.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KRBilici.WinFolder"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Добавление продукта" Height="800" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource WindSty}" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Добавление товара"
+               Grid.Column="1"
+               Grid.Row="1"
+               Grid.ColumnSpan="3"
+               Style="{DynamicResource LblSty}"/>
+
+
+
+        <TextBox x:Name="TbTypeProduct"
+                 Grid.Column="1"
+                 Grid.Row="3"
+                 Grid.ColumnSpan="3"
+                 materialDesign:HintAssist.Hint="Тип"
+                 materialDesign:HintAssist.HintOpacity="1"
+                 />
+
+
+
+        <TextBox x:Name="TbNameProduct"
+                 Grid.Column="1"
+                 Grid.Row="5"
+                 Grid.ColumnSpan="3"
+                 materialDesign:HintAssist.Hint="Наименование"
+                 materialDesign:HintAssist.HintOpacity="1"/>
+
+
+
+        <TextBox x:Name="TbNumberProduct"
+                 Grid.Column="1"
+                 Grid.Row="7"
+                 Grid.ColumnSpan="3"
+                 materialDesign:HintAssist.Hint="Количество"
+                 materialDesign:HintAssist.HintOpacity="1"/>
+
+
+
+        <TextBox x:Name="TbPriceProduct"
+                 Grid.Column="1"
+                 Grid.Row="9"
+                 Grid.ColumnSpan="3"  
+                 materialDesign:HintAssist.Hint="Цена"
+                 materialDesign:HintAssist.HintOpacity="1"/>
+
+
+
+        <ComboBox Name="CbStatusProduct" 
+                  Grid.Column="1"
+                  Grid.Row="11"
+                  Grid.ColumnSpan="3"
+                  materialDesign:HintAssist.Hint="Статус товара"
+                  materialDesign:HintAssist.HintOpacity="1"
+                  Width="650"/>
+
+        <Button x:Name="BtAddProduct"
+                materialDesign:ButtonAssist.CornerRadius="5"
+                Content="Добавить товар"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="13"
+                Width="500"
+                FontSize="20"
+                Click="BtAddProduct_Click"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                Height="45"/>
+
+    </Grid>
+</Window>
+                                                        

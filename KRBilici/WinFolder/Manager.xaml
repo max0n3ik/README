@@ -1,0 +1,137 @@
+﻿<Window x:Class="KRBilici.WinFolder.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KRBilici.WinFolder"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Окно менеджера" Height="700" Width="1300"
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource ResourceKey=WindSty}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Список продуктов"
+               Grid.Column="3"
+               Grid.ColumnSpan="3"
+               Grid.Row="1"
+               Style="{DynamicResource LblSty}"/>
+
+        <DataGrid x:Name="dgListProduct"
+                  Grid.Row="5"
+                  Grid.Column="1"
+                  Grid.RowSpan="7"
+                  Grid.ColumnSpan="7"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Style="{DynamicResource DgStyle}"   
+
+                  Loaded="dgListProduct_Loaded" >
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    x:Name="dgIdProduct"
+                    Header="№ п/п"                    
+                    Binding="{Binding IdProduct}"/>
+
+                <DataGridTextColumn
+                    x:Name="dgTypeProduct"
+                    Header="Тип товара"
+                    Width="*"
+                    Binding="{Binding TypeOfProduct}"/>
+
+                <DataGridTextColumn
+                    x:Name="dgNameProduct"
+                    Header="Название товара"
+                    Width="*"
+                    Binding="{Binding NameOfProduct}"/>
+
+                <DataGridTextColumn
+                    x:Name="dgNumberProduct"
+                    Header="Количество товара"
+                    Width="*"
+                    Binding="{Binding NumberOfProduct}"/>
+
+                <DataGridTextColumn
+                    x:Name="dgPriceProduct"
+                    Header="Цена товара"
+                    Width="*"
+                    Binding="{Binding PriceOfProduct}"/>
+
+                <DataGridTextColumn
+                    x:Name="dgStatusProduct"
+                    Header="Статус товара"
+                    Width="*"
+                    Binding="{Binding StatusProduct}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox  x:Name="TbSearchName"
+            Grid.Column="1" Grid.Row="2"
+                 Grid.RowSpan="3"
+                 Grid.ColumnSpan="7"
+                 Background="Transparent"
+                 materialDesign:HintAssist.Hint="Поиск"
+                 materialDesign:HintAssist.HintOpacity="1" 
+                  TextChanged="TextBox_TextChanged"/>
+
+
+        <Menu Grid.Row="0"
+              Grid.RowSpan="2"
+              Grid.Column="6"
+              Grid.ColumnSpan="2"
+              Style="{DynamicResource MenuStyle}"
+              Width="350"
+              Height="40" Template="{DynamicResource MenuControlTemplate1}"
+              
+               
+              >
+            <MenuItem Header="Списки" 
+                      Width="200" 
+                      >
+                <MenuItem Header="Список заказов"
+                           x:Name="MnListOrder"
+                          Click="MnListOrder_Click"/>
+
+                <MenuItem Header="Список поставщиков"
+                          x:Name="BtProviderList"
+                          Click="BtProviderList_Click"/>
+            </MenuItem>
+            <MenuItem Header="Товар">
+                <MenuItem Header="Добавить товар"
+                          x:Name="BtAddProduct"
+                      Click="BtAddProduct_Click"/>
+                <MenuItem Header="Редактировать товар"
+                           x:Name="BtRedcat"
+                      Click="BtRedcat_Click"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
